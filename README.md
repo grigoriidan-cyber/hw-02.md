@@ -65,20 +65,20 @@
 
 
 # Установка Zabbix server, Frontend, Agent, postgresql
-$ sudo -s\
-$ apt update && sudo apt upgrade\
-$ apt install postgresql\
-$ wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb\
-$ dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb\
-$ apt update\
-$ apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent\
-$ sudo -u postgres createuser --pwprompt zabbix\
-$ sudo -u postgres createdb -O zabbix zabbix\
-$ zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix\
+1. sudo -s
+2.  apt update && sudo apt upgrade
+3.  apt install postgresql
+4.  wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+5.  dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
+6.  apt update
+7.  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+8.  sudo -u postgres createuser --pwprompt zabbix
+9.  sudo -u postgres createdb -O zabbix zabbix
+10.  zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 # Отредактировал файл /etc/zabbix/zabbix_server.conf
-$ DBPassword=SECRET\
-$ systemctl restart zabbix-server zabbix-agent apache2\
-$ systemctl enable zabbix-server zabbix-agent apache2\
+11. DBPassword=SECRET
+12. systemctl restart zabbix-server zabbix-agent apache2
+13. systemctl enable zabbix-server zabbix-agent apache2
 
 
 ![](img/1.png)`
@@ -100,17 +100,16 @@ $ systemctl enable zabbix-server zabbix-agent apache2\
 ## В windows:
 Поставил через установщик .exe и настроил конфиг агента hostname=WIN_IT_1, server=10.50.21.7 ListenPort=12041 и перезапустил службу агента
 ## В ubuntu: 
-$ sudo -s\
-$ wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb\
-$ dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb\
-$ apt update\
-$ apt install zabbix-agent\
-$ systemctl restart zabbix-agent\
-$ systemctl enable zabbix-agent\
-# так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
-$ systemctl restart zabbix-agent\
-$ systemctl enable zabbix-agent\
-$ Косякнул и один раз стравил агента и сервер встать на один порт. так что логи находятся в /var/log/zabbix/ и в помошь команды: journalctl -xeu и systemctl status\
+1. sudo -s
+2. wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+3. dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
+4. apt update
+5. apt install zabbix-agent
+6. systemctl restart zabbix-agent
+7. systemctl enable zabbix-agent
+## Так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
+9. systemctl restart zabbix-agent
+10. systemctl enable zabbix-agent
    
 ---
 
