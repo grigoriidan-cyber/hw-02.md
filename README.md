@@ -48,7 +48,6 @@
 
 #### Требования к результатам
 1. Приложите в файл README.md скриншот раздела Latest Data, где видно свободное место на диске C:
---- 
 
 ## Критерии оценки
 
@@ -64,7 +63,6 @@
 ### Задание 1
 
 
-```
 
 Установка Zabbix server, Frontend, Agent, postgresql
 $ sudo -s
@@ -82,16 +80,13 @@ $ DBPassword=SECRET
 $ systemctl restart zabbix-server zabbix-agent apache2
 $ systemctl enable zabbix-server zabbix-agent apache2
 
-```
 
 ![](img/1.png)`
-
 
 ---
 
 ### Задание 2
 
-```
 # лог zabbix agent(Windows)
 ![](img/4.png)`
 
@@ -101,7 +96,6 @@ $ systemctl enable zabbix-server zabbix-agent apache2
 # Monitoring > Latest data
 ![](img/2.png)`
  
----
 
 # В windows поставил через установщик .exe и настроил конфиг агента hostname=WIN_IT_1, server=10.50.21.7 ListenPort=12041 и перезапустил службу агента
 # В ubuntu: 
