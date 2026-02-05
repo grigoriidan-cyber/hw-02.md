@@ -64,7 +64,7 @@
 
 
 
-Установка Zabbix server, Frontend, Agent, postgresql
+# Установка Zabbix server, Frontend, Agent, postgresql
 $ sudo -s\
 $ apt update && sudo apt upgrade\
 $ apt install postgresql\
