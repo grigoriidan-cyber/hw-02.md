@@ -97,19 +97,20 @@ $ systemctl enable zabbix-server zabbix-agent apache2
 ![](img/2.png)`
  
 
-# В windows поставил через установщик .exe и настроил конфиг агента hostname=WIN_IT_1, server=10.50.21.7 ListenPort=12041 и перезапустил службу агента
-# В ubuntu: 
-$ sudo -s
-$ wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
-$ dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
-$ apt update
-$ apt install zabbix-agent
-$ systemctl restart zabbix-agent
-$ systemctl enable zabbix-agent
-# так как я изначально поставил агента вместе с заббиксом, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
-$ systemctl restart zabbix-agent
-$ systemctl enable zabbix-agent
-$ Косякнул и один раз стравил агента и сервер встать на один порт. так что логи находятся в /var/log/zabbix/ и в помошь команды: journalctl -xeu и systemctl status
+## В windows:
+Поставил через установщик .exe и настроил конфиг агента hostname=WIN_IT_1, server=10.50.21.7 ListenPort=12041 и перезапустил службу агента
+## В ubuntu: 
+$ sudo -s\
+$ wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb\
+$ dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb\
+$ apt update\
+$ apt install zabbix-agent\
+$ systemctl restart zabbix-agent\
+$ systemctl enable zabbix-agent\
+# так как я изначально поставил агента вместе с заббиксом, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию\
+$ systemctl restart zabbix-agent\
+$ systemctl enable zabbix-agent\
+$ Косякнул и один раз стравил агента и сервер встать на один порт. так что логи находятся в /var/log/zabbix/ и в помошь команды: journalctl -xeu и systemctl status\
    
 ---
 
