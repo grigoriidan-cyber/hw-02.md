@@ -84,7 +84,6 @@ $ systemctl enable zabbix-server zabbix-agent apache2
 
 ```
 
-`При необходимости прикрепитe сюда скриншоты
 ![](img/1.png)`
 
 
