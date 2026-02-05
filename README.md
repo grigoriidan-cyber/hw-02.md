@@ -88,13 +88,13 @@ $ systemctl enable zabbix-server zabbix-agent apache2\
 ### Задание 2
 
 # лог zabbix agent(Windows)
-![](img/4.png)`
+![](img/4.png)
 
 # Configuration > Hosts
-![](img/3.png)`
+![](img/3.png)
 
 # Monitoring > Latest data
-![](img/2.png)`
+![](img/2.png)
  
 
 ## В windows:
@@ -115,4 +115,4 @@ $ Косякнул и один раз стравил агента и серве�
 ---
 
 ### Задание 3
- Получается выполнил :)
+![](img/5.png)
