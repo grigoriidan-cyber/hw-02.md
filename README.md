@@ -75,7 +75,7 @@
 8.  sudo -u postgres createuser --pwprompt zabbix
 9.  sudo -u postgres createdb -O zabbix zabbix
 10.  zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-# Отредактировал файл /etc/zabbix/zabbix_server.conf
+    Отредактировал файл /etc/zabbix/zabbix_server.conf
 11. DBPassword=SECRET
 12. systemctl restart zabbix-server zabbix-agent apache2
 13. systemctl enable zabbix-server zabbix-agent apache2
@@ -107,9 +107,9 @@
 5. apt install zabbix-agent
 6. systemctl restart zabbix-agent
 7. systemctl enable zabbix-agent
-## Так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
-9. systemctl restart zabbix-agent
-10. systemctl enable zabbix-agent
+Так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
+8. systemctl restart zabbix-agent
+9. systemctl enable zabbix-agent
    
 ---
 
