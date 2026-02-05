@@ -107,7 +107,7 @@ $ apt update\
 $ apt install zabbix-agent\
 $ systemctl restart zabbix-agent\
 $ systemctl enable zabbix-agent\
-# так как я изначально поставил агента вместе с заббиксом, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию\
+# так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
 $ systemctl restart zabbix-agent\
 $ systemctl enable zabbix-agent\
 $ Косякнул и один раз стравил агента и сервер встать на один порт. так что логи находятся в /var/log/zabbix/ и в помошь команды: journalctl -xeu и systemctl status\
