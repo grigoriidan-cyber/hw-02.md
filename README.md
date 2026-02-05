@@ -85,7 +85,7 @@ $ systemctl enable zabbix-server zabbix-agent apache2
 ```
 
 `При необходимости прикрепитe сюда скриншоты
-![1.png](https://github.com/grigoriidan-cyber/hw-02.md/edit/main/img)`
+![](img/1.png)`
 
 
 ---
@@ -94,13 +94,13 @@ $ systemctl enable zabbix-server zabbix-agent apache2
 
 ```
 # лог zabbix agent(Windows)
-![4.png](https://github.com/grigoriidan-cyber/hw-02.md/edit/main/img)`
+![](img/4.png)`
 
 # Configuration > Hosts
-![3.png](https://github.com/grigoriidan-cyber/hw-02.md/edit/main/img)`
+![](img/3.png)`
 
 # Monitoring > Latest data
-![2.png](https://github.com/grigoriidan-cyber/hw-02.md/edit/main/img)`
+![](img/2.png)`
  
 ---
 
