@@ -74,7 +74,7 @@
 7.  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 8.  sudo -u postgres createuser --pwprompt zabbix
 9.  sudo -u postgres createdb -O zabbix zabbix
-10.  zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+10.  zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix\
     Отредактировал файл /etc/zabbix/zabbix_server.conf
 11. DBPassword=SECRET
 12. systemctl restart zabbix-server zabbix-agent apache2
