@@ -74,8 +74,7 @@
 7.  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
 8.  sudo -u postgres createuser --pwprompt zabbix
 9.  sudo -u postgres createdb -O zabbix zabbix
-10.  zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix\
-    Отредактировал файл /etc/zabbix/zabbix_server.conf
+10. zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 11. DBPassword=SECRET
 12. systemctl restart zabbix-server zabbix-agent apache2
 13. systemctl enable zabbix-server zabbix-agent apache2
@@ -104,8 +103,10 @@
 2. wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 3. dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
 4. apt update
-5. apt install zabbix-agent
-6. systemctl restart zabbix-agent   
+6. apt install zabbix-agent
+5. nano /etc/zabbix/zabbix_agentd.conf
+8. systemctl restart zabbix-agent
+9. systemctl enable zabbix-agent
 ---
 
 ### Задание 3
