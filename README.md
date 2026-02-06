@@ -75,7 +75,7 @@
 8.  sudo -u postgres createuser --pwprompt zabbix
 9.  sudo -u postgres createdb -O zabbix zabbix
 10. zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-11. DBPassword=SECRET
+11. nano /etc/zabbix/zabbix_server.conf и изменил строку DBPassword=SECRET
 12. systemctl restart zabbix-server zabbix-agent apache2
 13. systemctl enable zabbix-server zabbix-agent apache2
 
