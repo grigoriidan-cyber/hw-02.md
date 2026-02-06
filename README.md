@@ -105,12 +105,7 @@
 3. dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
 4. apt update
 5. apt install zabbix-agent
-6. systemctl restart zabbix-agent
-7. systemctl enable zabbix-agent
-Так как я изначально поставил агента вместе с zabbix server, то мне остается только настроить конфиг в /etc/zabbix/zabbix_agentd.conf порт оставил по умолчанию
-8. systemctl restart zabbix-agent
-9. systemctl enable zabbix-agent
-   
+6. systemctl restart zabbix-agent   
 ---
 
 ### Задание 3
